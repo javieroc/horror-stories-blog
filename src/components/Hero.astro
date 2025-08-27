@@ -1,0 +1,51 @@
+---
+import { Image } from "astro:assets";
+import forest from "../assets/forest.jpg";
+---
+<section class="relative min-h-[40vh] sm:min-h-[80vh] lg:h-screen flex flex-col justify-center items-center text-center px-6 overflow-hidden">
+  <div class="absolute inset-0 -z-20">
+    <Image
+      src={forest}
+      alt="Dark forest background"
+      format="jpg"
+      widths={[800, 1200, 1600, 2400]}
+      sizes="100vw"
+      class="w-full h-full object-cover"
+      loading="eager"
+    />
+  </div>
+
+  <!-- Moving Clouds (multi-layer) -->
+<div class="cloud absolute inset-0 -z-10">
+  <img src="/cloud1.png" alt="cloud" style="--i:1" />
+  <img src="/cloud2.png" alt="cloud" style="--i:2" />
+  <img src="/cloud3.png" alt="cloud" style="--i:3" />
+  <img src="/cloud4.png" alt="cloud" style="--i:4" />
+  <img src="/cloud5.png" alt="cloud" style="--i:5" />
+</div>
+</section>
+
+<style>
+.cloud img {
+  animation: cld calc(20s * var(--i)) linear infinite;
+  opacity: 0.6;
+  max-width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+@keyframes cld {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .cloud img {
+    animation-duration: calc(22s * var(--i));
+  }
+}
+</style>
