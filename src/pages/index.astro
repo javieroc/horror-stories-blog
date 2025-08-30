@@ -1,4 +1,5 @@
 ---
+import About from '../components/About.astro';
 import Footer from '../components/Footer.astro';
 import Hero from '../components/Hero.astro';
 import Layout from '../layouts/Layout.astro';
@@ -6,5 +7,19 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout>
 	<Hero />
+	<About />
 	<Footer />
 </Layout>
+
+<style is:global>
+	@reference '../styles/global.css';
+
+	/* Font utility classes */
+	.font-metal-mania {
+		font-family: 'Metal Mania', system-ui;
+	}
+
+	.font-special-elite {
+		font-family: 'Special Elite', system-ui;
+	}
+</style>

@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 import forest from "../assets/forest.jpg";
 ---
-<section class="relative min-h-[40vh] sm:min-h-[80vh] lg:h-screen flex flex-col justify-center items-center text-center px-6 overflow-hidden">
+<section class="relative min-h-[40vh] sm:min-h-[65vh] flex flex-col justify-center items-center text-center px-6 overflow-hidden">
   <div class="absolute inset-0 -z-20">
     <Image
       src={forest}
@@ -15,14 +15,18 @@ import forest from "../assets/forest.jpg";
     />
   </div>
 
-  <!-- Moving Clouds (multi-layer) -->
-<div class="cloud absolute inset-0 -z-10">
-  <img src="/cloud1.png" alt="cloud" style="--i:1" />
-  <img src="/cloud2.png" alt="cloud" style="--i:2" />
-  <img src="/cloud3.png" alt="cloud" style="--i:3" />
-  <img src="/cloud4.png" alt="cloud" style="--i:4" />
-  <img src="/cloud5.png" alt="cloud" style="--i:5" />
-</div>
+    <!-- Moving Clouds (multi-layer) -->
+  <div class="cloud absolute inset-0 -z-10">
+    <img src="/cloud1.png" alt="cloud" style="--i:1" />
+    <img src="/cloud2.png" alt="cloud" style="--i:2" />
+    <img src="/cloud3.png" alt="cloud" style="--i:3" />
+    <img src="/cloud4.png" alt="cloud" style="--i:4" />
+    <img src="/cloud5.png" alt="cloud" style="--i:5" />
+  </div>
+
+  <h1 class="relative font-metal-mania text-4xl sm:text-6xl lg:text-7xl text-[#F0F2F7] drop-shadow-lg z-10">
+    The Bottle of Klein
+  </h1>
 </section>
 
 <style>
