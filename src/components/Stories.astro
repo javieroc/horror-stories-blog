@@ -1,0 +1,59 @@
+---
+import { User, Clock, ChevronRight } from '@lucide/astro';
+import { getCollection, type CollectionEntry  } from 'astro:content';
+
+type Story = CollectionEntry<'stories'>;
+const storiesCollection: Story[] = await getCollection('stories');
+---
+
+<section class="py-20 bg-shadow relative">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">
+        Read Our Chilling Stories
+      </h2>
+      <p class="text-lg max-w-2xl mx-auto">
+        Beware what you ask, for it may come to pass...
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {storiesCollection.map((story) => {
+        const { title, excerpt, author, date, category, readTime } = story.data;
+        return (
+        <article class="bg-shadow-deep border border-shadow-light rounded-lg p-6 hover:border-blood transition-all duration-300 hover:shadow-lg hover:shadow-blood/30 hover:glow-blood group cursor-pointer hover:bg-shadow hover:scale-105">
+          <div class="flex items-center justify-between mb-4">
+            <span class="inline-flex items-center rounded-md bg-pink-50 px-2 py-1 text-xs font-medium text-pink-700 inset-ring inset-ring-pink-700/10">{category}</span>
+            <span class="-dark text-sm">{date}</span>
+          </div>
+          
+          <h3 class="text-xl font-bold  mb-3 group-hover:text-blood transition-colors">
+            {title}
+          </h3>
+          
+          <p class="-dark leading-relaxed mb-4 line-clamp-3">
+            {excerpt}
+          </p>
+          
+          <div class="flex items-center justify-between text-sm -dark">
+            <div class="flex items-center space-x-2">
+              <User class="h-4 w-4" />
+              <span>{author}</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <Clock class="h-4 w-4" />
+              <span>{readTime}</span>
+            </div>
+          </div>
+        </article>
+      )})}
+    </div>
+
+    <div class="text-center mt-12">
+      <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+        View All Stories
+        <ChevronRight class="ml-2 h-5 w-5" />
+      </button>
+    </div>
+  </div>
+</section>
