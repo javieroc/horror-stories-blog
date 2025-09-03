@@ -1,3 +1,50 @@
-<footer class="bg-[#090205] text-center py-8 border-t border-[#270a16]">
-  <p class="text-gray-500">© 2025 Dark Whispers | Real Horror Stories</p>
+<footer class="relative w-full bg-[#252330] text-white py-10 overflow-hidden p-4">
+  <div class="flex justify-end">
+    <p class="text-lg">&copy; 2025 Dev&Coffee. All rights reserved.</p>
+  </div>
+
+  <!-- Snowflake animation container -->
+  <div class="absolute top-0 left-0 w-full h-full pointer-events-none">
+    {Array.from({ length: 12 }).map((_, i) => (
+      <svg
+        class="absolute w-6 h-6 animate-snowflake"
+        style={`
+          top: ${Math.random() * 80}%;
+          left: -10%;
+          animation-delay: ${Math.random() * 6}s;
+          opacity: ${0.5 + Math.random() * 0.5};
+        `}
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        stroke="white"
+        stroke-width="1"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <g>
+          <line x1="12" y1="0" x2="12" y2="24"/>
+          <line x1="0" y1="12" x2="24" y2="12"/>
+          <line x1="4" y1="4" x2="20" y2="20"/>
+          <line x1="20" y1="4" x2="4" y2="20"/>
+          <line x1="6" y1="12" x2="18" y2="12"/>
+          <line x1="12" y1="6" x2="12" y2="18"/>
+        </g>
+      </svg>
+    ))}
+  </div>
+
+  <style>
+    @keyframes snowflake-blow {
+      0% { transform: translateX(0) translateY(0) rotate(0deg); opacity: 0; }
+      10% { opacity: 1; }
+      50% { transform: translateX(50vw) translateY(15px) rotate(180deg); }
+      75% { transform: translateX(80vw) translateY(-10px) rotate(270deg); }
+      100% { transform: translateX(120vw) translateY(0) rotate(360deg); opacity: 0; }
+    }
+
+    .animate-snowflake {
+      animation: snowflake-blow 12s linear infinite;
+    }
+  </style>
 </footer>
