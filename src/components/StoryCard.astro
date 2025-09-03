@@ -1,0 +1,41 @@
+---
+import { User, Clock } from '@lucide/astro';
+interface Props {
+  story: {
+    title: string;
+    date: string;
+    author: string;
+    excerpt: string;
+    category: string;
+    readTime: string;
+  }
+}
+
+const { story } = Astro.props;
+---
+
+<article class="bg-shadow-deep border border-shadow-light rounded-lg p-6 hover:border-blood transition-all duration-300 hover:shadow-lg hover:shadow-blood/30 hover:glow-blood group cursor-pointer hover:bg-shadow hover:scale-105">
+  <div class="flex items-center justify-between mb-4">
+    <span class="inline-flex items-center rounded-md bg-[#BFC0D1] px-2 py-1 text-xs font-medium text-[#1B0C1A] inset-ring inset-ring-[#1B0C1A]">{story.category}</span>
+    <span class="font-special-elite text-sm">{story.date}</span>
+  </div>
+  
+  <h3 class="font-special-elite text-xl font-bold mb-3 group-hover:text-blood transition-colors">
+    {story.title}
+  </h3>
+  
+  <p class="font-special-elite leading-relaxed mb-4 line-clamp-3">
+    {story.excerpt}
+  </p>
+  
+  <div class="flex items-center justify-between text-sm">
+    <div class="flex items-center space-x-2">
+      <User class="h-4 w-4" />
+      <span>{story.author}</span>
+    </div>
+    <div class="flex items-center space-x-2">
+      <Clock class="h-4 w-4" />
+      <span>{story.readTime}</span>
+    </div>
+  </div>
+</article>
