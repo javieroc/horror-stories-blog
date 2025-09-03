@@ -1,0 +1,16 @@
+---
+import { ArrowLeft } from "@lucide/astro";
+
+const isIndex = Astro.url.pathname === "/";
+---
+<nav class="w-full fixed top-0 left-0 z-50 bg-transparent">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      {!isIndex && (
+        <a href="/" class="flex items-center hover:text-gray-600 transition-colors">
+          <ArrowLeft class="w-6 h-6" />
+        </a>
+      )}
+    </div>
+  </div>
+</nav>

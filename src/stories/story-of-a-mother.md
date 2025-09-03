@@ -19,6 +19,8 @@ Since the old man was shivering with cold and the child had fallen asleep, the m
 
 The old man, who was Death himself, made a strange gesture with his head; it could have been either yes or no. The woman lowered her eyes, and tears rolled down her cheeks. Her head was heavy; she had not slept for three nights, and she fell into a brief doze; but she awoke instantly, shivering with cold.
 
+![Death](../assets/the-story-of-a-mother/death.jpeg)
+
 **Mother:** "What is this?"  
 She looked around. The old man had vanished, and the cradle was empty. He had taken the child! The clock in the corner gave a dull sound, the heavy lead weight dropped with a screech to the floor—*bang!*—and the hands stopped.
 
@@ -36,6 +38,8 @@ Night stood silent and still, and the mother wrung her hands and sang and wept; 
 
 **Night:** "Go to the right, into the dark fir forest. I saw Death go there with your child."
 
+![Forest](../assets/the-story-of-a-mother/forest.jpeg)
+
 Deep in the forest, the path divided, and the woman did not know which way to take. There stood a thornbush, leafless and flowerless, for it was winter, and its branches were thick with ice and snow.
 
 **Mother:** "Have you seen Death pass by with my child?"
@@ -45,6 +49,8 @@ Deep in the forest, the path divided, and the woman did not know which way to ta
 She pressed the thornbush to her breast to warm it, and the thorns pierced her flesh, and blood flowed in large drops. Yet fresh leaves and blossoms sprang from the bush in that winter night, such was the warmth of the grieving mother’s heart. And the bush told her which path to take.
 
 She came to a great lake, where no boat was to be seen. It was not frozen solid enough to bear her weight, nor was it shallow enough to wade through; yet she had to cross it if she wanted to find her child. She threw herself on the ground, resolved to drink it dry, but what mortal could do that? Still, the anguished mother hoped for a miracle.
+
+![River](../assets/the-story-of-a-mother/river.jpeg)
 
 **Lake:** "No, you will never succeed. But let us make a bargain. I love to collect pearls, and your eyes are the two purest pearls I have ever seen. If you weep them out for me, I will carry you to the great greenhouse where Death tends flowers and trees; each of them is a human life."
 
