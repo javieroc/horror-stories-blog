@@ -19,7 +19,7 @@ const storiesCollection: Story[] = await getCollection('stories');
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       {storiesCollection.map((story) => (
-        <a href={`/stories/${story.id}`}>
+        <a href={`/the-bottle-of-klein/stories/${story.id}`}>
           <StoryCard story={story.data} />
         </a>
       ))}
